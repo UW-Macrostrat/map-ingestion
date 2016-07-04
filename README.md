@@ -3,7 +3,7 @@
 ## Workflow
 
 + Find, download, evaluate, and process dataset
-  + double check all fields for accuracy: **innaccurate and incomplete data is worse than no data**
+  + double check all fields for accuracy: **innaccurate and incomplete data are worse than no data**
   + if adding new fields do not name fields with spaces or non-standard characters
   + do not include duplicated information (e.g., if there is a already a field the unit name and you are adding a field for its descriptions by copying and pasting, do not include the strat_name in the description)
 + Create a new folder for the dataset, and save the geology geometry as `geology.shp` and the faults as `lines.shp`

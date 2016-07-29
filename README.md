@@ -10,3 +10,10 @@
 + Rename and save any `txt` or `pdf` metadata as `metadata.x`
 + Secure copy this new folder to `teststrata:/Users/collaborator/ready`
 + Create a new issue on this repository and fill out all fields
+
+## Data of interest and importance
++ In general, there is no reason to delete anything from the original data directories that are download. Original data should be preserved
++ Data of specific use:
+  + *polygons* showing bedrock and surficial geology with age, lithology/description, and a name of some kind
+  + *lines* identifing faults, folds, dikes, and beds. lines not pertaining to geological features (e.g., map boundaries, roads, etc.) are not to be processed.
+  + *points* identifying measurements of strike/dip, foliation, lineation, and other rock-specific features. points of general interest (e.g., mines, craters, stations) are not to be processed.

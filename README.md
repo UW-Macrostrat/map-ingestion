@@ -15,5 +15,5 @@
 + In general, there is no reason to delete anything from the original data directories that are download. Original data should be preserved
 + Data of specific use (in order of priority):
   + *polygons* showing bedrock and surficial geology with age, lithology/description, and a name of some kind
-  + *lines* identifing faults, folds, dikes, and beds. lines not pertaining to geological features (e.g., map boundaries, roads, etc.) are not to be processed.
+  + *lines* identifing faults, folds, dikes, and beds and other geology-specific features. lines not pertaining to geological features (e.g., map boundaries, roads, transects, cross section lines, etc.) are not to be processed.
   + *points* identifying measurements of strike/dip, foliation, lineation, and other rock-specific features. points of general interest (e.g., mines, craters, stations) are not to be processed.

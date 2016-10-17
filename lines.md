@@ -11,7 +11,7 @@
 2. Add `new_type` and `new_direction` fields
 3. Get unique types from dataset and map them into known values
 
-| Fields to include |
+| Fields we end up with |
 | :---------------- |
 | name |
 | type |
@@ -20,7 +20,7 @@
 | new_type |
 
 
-| Line types     |
+| Used new_types     |
 | :------------- |
 | anticline |
 | bed |

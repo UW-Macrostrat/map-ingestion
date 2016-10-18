@@ -46,3 +46,6 @@
 ## SQL Examples 
 ### To add unique gids to a table: 
 ````INSERT INTO sources.fault_lines (gid) SELECT (SELECT max(gid) + sources.fold_lines.gid FROM sources.fault_lines) from sources.fold_lines````
+
+### To add type data into the new gid rows created: 
+````UPDATE sources.fault_lines SET type=fold_lines.type FROM sources.fold_lines WHERE fault_lines.gid=((select max(gid) - fold_lines.gid from sources.fault_lines))

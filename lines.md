@@ -42,3 +42,7 @@
 | thrust fault |
 | vein |
 | zone |
+
+## SQL Examples 
+### To add unique gids to a table: 
+````INSERT INTO sources.fault_lines (gid) SELECT (SELECT max(gid) + sources.fold_lines.gid FROM sources.fault_lines) from sources.fold_lines````

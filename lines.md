@@ -42,6 +42,10 @@
 | thrust fault |
 | vein |
 | zone |
+| spreading center |
+| klippe |
+| fenster |
+| impact structure |
 
 ## SQL Examples 
 ### To add unique gids to a table: 

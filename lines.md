@@ -43,6 +43,7 @@
 | vein |
 | zone |
 | spreading center |
+| extinct spreading center fracture |
 | klippe |
 | fenster |
 | impact structure |

@@ -18,7 +18,7 @@
 +  Save the geology geometry as `geology.shp`, lines (faults, folds, etc.) as `lines.shp`, and points (strike/dip) as `points.shp`
 + Create a new folder for the dataset, and include: 
    + shapefiles
-   + zipped SQL dumps
+   + zipped SQL dump(s)
    + any `txt` or `pdf` metadata renamed and saved as `metadata.x`
    + any other relevant source materials (maps, pamphlets, map descriptions, etc.)
 + Secure copy this new folder to `teststrata:/Users/collaborator/ready`

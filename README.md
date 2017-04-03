@@ -5,7 +5,7 @@
 + Find, download, and evaluate dataset
   + Data requirements: vector geometries, ages, lithologies.
 + Process dataset
-  + Convert to shapefile if necessary (e.g. if e00)
+  + Convert to shapefile if necessary (e.g. if e00 see [conversion instructions](http://support.esri.com/technical-article/000004705))
   + Import shapefile attribute table(s) into Postgres
   + Update or fill in tables using source materials (if necessary)
   + Assign early_ids and late_ids to units in geology table (see [ages instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/ages.md))

@@ -7,7 +7,7 @@
 + #### Process dataset
   + Convert to shapefile if necessary (e.g. if e00 see [conversion instructions](http://support.esri.com/technical-article/000004705))
   + Import shapefile attribute table(s) into Postgres
-  + Update or fill in tables using source materials (if necessary):
+  + Update or fill in tables using source materials (if necessary) in Postico:
       + Double check all fields for accuracy: **innaccurate and incomplete data are worse than no data**
       + If adding new fields, do not name fields with spaces or non-standard characters
       + Do not include duplicated information (e.g., if there is a already a field the unit name and you are adding a field for its descriptions by copying and pasting, do not include the strat_name in the description)
@@ -20,7 +20,7 @@
    + shapefiles (save geology geometry as `geology.shp`, lines (faults, folds, etc.) as `lines.shp`, and points (strike/dip) as `points.shp`)
    + zipped SQL dump(s)
    + any `txt` or `pdf` metadata renamed and saved as `metadata.x`
-   + any other relevant source materials (maps, pamphlets, map descriptions, etc.)
+   + any other relevant source materials (maps, pamphlets, map descriptions, readme, etc.)
 + #### Secure copy this new folder to `teststrata:/Users/collaborator/ready`
 + #### Create a new issue on this repository and fill out all fields
 + #### Move the issue to the "Ready to import" column in [Processing](https://github.com/UW-Macrostrat/burwell-processing/projects/1)

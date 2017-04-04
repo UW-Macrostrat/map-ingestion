@@ -16,7 +16,7 @@ Run the following commands in terminal:
 
 `cd ~/Documents/burwell-master`
 
-`./import test /Users/labuser/Documents/Macrostrat/Estonia/BuriedValleys.shp false LATIN1`
+`./import Example /Users/labuser/Desktop/Example.shp false LATIN1`
    
 
 **4. Process dataset**

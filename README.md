@@ -37,7 +37,11 @@ Run the following commands in terminal:
    + any `txt` or `pdf` metadata renamed and saved as `metadata.x`
    + any other relevant source materials (maps, pamphlets, map descriptions, readme, etc.)
    
-**7. Secure copy this new folder to `teststrata:/Users/collaborator/ready`**
+**7. Secure copy this new folder to teststrata:**
+  
+Example command (in terminal):   
+  
+`scp -P 2200 -r ~/Documents/Macrostrat/source_folder collaborator@teststrata.geology.wisc.edu:/users/collaborator`
 
 **8. Create a new issue on this repository and fill out all fields**
 

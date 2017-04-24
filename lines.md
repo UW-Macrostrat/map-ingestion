@@ -50,7 +50,7 @@
 
 ## SQL Examples 
 ### To add unique gids to a table: 
-````INSERT INTO sources.fault_lines (gid) SELECT (SELECT max(gid) + sources.fold_lines.gid FROM sources.fault_lines) from sources.fold_lines````
+````INSERT INTO sources.faults (gid) SELECT (SELECT max(gid) + sources.folds.gid FROM sources.faults) from sources.folds````
 
 ### To add type data into the new gid rows created: 
-````UPDATE sources.fault_lines SET type=fold_lines.type FROM sources.fold_lines WHERE fault_lines.gid=(select max(gid) + 1 - fold_lines.gid from sources.fault_lines)````
+````UPDATE sources.faults SET type=folds.type FROM sources.folds WHERE faults.gid=(select max(gid) + 1 - folds.gid from sources.faults)````

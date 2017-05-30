@@ -1,26 +1,66 @@
 ## Info
 **Name:**
+<!---
+The name of the map.
+Example: Geologic Map of the Ute Mountain 7.5' Quadrangle, Taos County, New Mexico, and Conejos and Costilla Counties, Colorado
+-->
 
 **Source URL:**
+<!---
+A direct link to the original map
+Example: https://pubs.usgs.gov/sim/3284/
+-->
 
 **Estimated scale:**
 
 **Number of bedrock polygons:**
 
 **Lithology field:**
+<!---
+The field that indicates the lithology for a given map polygon.
+Example: lith
+-->
 
 **Time field:**
+<!---
+The field that indicates the time for a given map polygon. You can also provide two fields when an upper and lower age is known
+Example: age, or age_top, age_bottom
+-->
+
 
 **Stratigraphy name field:**
+<!---
+If stratigraphic names are present, the field that contains them
+Example: strat_name
+-->
+
 
 **Description field:**
+<!---
+The field that contains unit descriptions
+Example: descrip
+-->
 
 **Comments field:**
+<!---
+The field that contains any additional information about the map unit
+Example: comments
+-->
+
 
 **Comments:**
+<!---
+Please list which tables or files contain the polygons, lines, and points here. 
+You can also list any other information about the map here. Oddities, things to know, etc.
+Example: polygons: `map_units`, lines: `geological_lines`, points: `map_points`
+-->
 
 
 ## Todo:
+<!---
+The Macrostrat team will update these fields. Please do not edit them
+-->
+
 
 - [ ] Insert new source record
 - [ ] Add data to database

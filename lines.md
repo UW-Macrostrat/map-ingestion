@@ -11,6 +11,8 @@
 2. Add `new_type` and `new_direction` fields
 3. Get unique types from dataset and map them into known values
 
+NOTE: assign the new_type 'thrust fault' to reverse fault lines
+
 | Fields we end up with |
 | :---------------- |
 | name |

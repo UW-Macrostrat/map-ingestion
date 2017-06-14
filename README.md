@@ -17,9 +17,9 @@ Run the following commands in terminal:
 Change directory to burwell repo folder
 
 
-`cd [path]`
+`cd [path to repo folder]`
 
-`./import table_name [path] false LATIN1`
+`./import table_name [path to shapefile] false LATIN1`
    
 
 **4. Process dataset**

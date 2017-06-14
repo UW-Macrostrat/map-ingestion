@@ -8,7 +8,7 @@
 **2. Convert geospatial data to shapefile format if necessary**
   + e.g. if e00 see [conversion instructions](http://support.esri.com/technical-article/000004705)
   
-**3. Import shapefile dataset(s) into PostgreSQL**
+**3. Import shapefile data table(s) of interest into PostgreSQL**
 
 *NOTE: If doing this for the first time, first download the [Burwell Repository](https://github.com/UW-Macrostrat/burwell), and save the folder as `burwell` into documents on your machine.*
 

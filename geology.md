@@ -7,14 +7,13 @@ Optional text columns: `comments`
 ALTER TABLE table_name ADD COLUMN column_name TEXT;
 ```
 
-
 # Step 2: Fill in Missing Data.
 
 
 Use source materials (maps, pamphlets, etc.) to update the geology table.
 + `name`: formal or informal unit name 
 + `strat_name`: formal stratigraphic name (e.g. St. Peter Formation); leave column blank for units with informal names (e.g. alluvium). **NOTE:** Separate multiple names with semicolons
-+ `hierarchy`: if denoted, formal name(s) of unit ranked above the `strat_name` unit. **Note:** If more than one rank above strat_name is denoted, separate the hierarchy names with "of the". 
++ `hierarchy`: if denoted, formal name(s) of unit ranked above the `strat_name` unit. **Note:** If more than one rank above strat_name is denoted, separate the hierarchy names with "of the" 
 
 Example:
 
@@ -22,7 +21,7 @@ strat_name | hierarchy
 ---------- | ----------
 Galeros Formation| Chuar Group of the Grand Canyon Supergroup
 
-+ `age`: age interval(s) of unit.  
++ `age`: age interval(s) of unit 
 + `description`: description of map unit
 + `lithology`: lithology of map unit
 + `comments`: any relevant/additional comments

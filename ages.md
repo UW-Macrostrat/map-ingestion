@@ -16,7 +16,7 @@ SElECT distinct age FROM table_name WHERE early_id is NULL;
 ```
 
 **Set late_id and early_id with a string replace** \
-Run if age data uses 'lower' and 'upper' instead of 'late' and 'early'
+Run if age data uses 'upper' and 'lower' instead of 'late' and 'early'
 
 ```
 UPDATE table_name 

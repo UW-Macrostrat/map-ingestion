@@ -12,11 +12,12 @@
 
 *NOTE: If doing this for the first time, first download the [Burwell Repository](https://github.com/UW-Macrostrat/burwell), and save the folder as `burwell` into documents on your machine.*
 
-Run the following commands in terminal: 
+Run the following commands in terminal: \ 
 
+Change directory to burwell repo folder
 `cd ~/Documents/burwell-master`
 
-`./import Example /Users/labuser/Desktop/Example.shp false LATIN1`
+`./import table_name [path] false LATIN1`
    
 
 **4. Process dataset**

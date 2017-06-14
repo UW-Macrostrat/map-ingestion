@@ -2,7 +2,7 @@
 Needed text columns: `name`, `strat_name`, `hierarchy`, `age`, `description` and/or `lithology` \
 Optional text columns: `comments`
 
-**Add column example:**
+**ADD COLUMN example:**
 ```
 ALTER TABLE table_name ADD COLUMN column_name TEXT;
 ```

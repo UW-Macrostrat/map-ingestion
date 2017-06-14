@@ -10,7 +10,7 @@
   
 **3. Import shapefile data table(s) of interest into PostgreSQL**
 
-*NOTE: If doing this for the first time, first download the [Burwell Repository](https://github.com/UW-Macrostrat/burwell), and save the folder as `burwell` on your machine.*
+*NOTE: If doing this for the first time, download the [Burwell Repository](https://github.com/UW-Macrostrat/burwell), and save the folder as `burwell` on your machine.*
 
 Run the following commands in terminal:
 

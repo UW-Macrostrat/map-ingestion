@@ -50,7 +50,7 @@ WHERE age ILIKE concat(m.interval_name, '-%')
 
 ```
 UPDATE table_name 
-SET late_id = m.id, early_id=e.id 
+SET late_id = l.id, early_id=e.id 
 FROM macrostrat.intervals l, macrostrat.intervals e 
 WHERE l.interval_name = 'Cambrian' 
   AND e.interval_name = 'Neoproterozoic' 

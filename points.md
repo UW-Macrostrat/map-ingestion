@@ -8,6 +8,15 @@
   - Add max(gid) to rows that you are inserting into the homogenozied table
 2. Add `point_type` field
 3. Get unique types from dataset and map them into known values
+4. Add column for dip direction (if missing) if map uses right hand rule: 
+
+## SQL Example 
+### To add unique dip_dir to a table: 
+````UPDATE sources.points set dip_dir=strike+90````
+
+### Account for strike values greater than 270: 
+````UPDATE sources.point set dip_dir=dip_dir-360 where dip_dir>360````
+
 
 | Fields we end up with |
 | :---------------- |
@@ -25,3 +34,4 @@
 | fault surface |
 | fold axis |
 | joint |
+

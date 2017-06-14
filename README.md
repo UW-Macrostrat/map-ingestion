@@ -24,9 +24,9 @@ Change directory to burwell repo folder
 
 **4. Process dataset**
 
-Update or fill in tables using source materials (if necessary) in Postico: \
-- Double check all fields for accuracy: **innaccurate and incomplete data are worse than no data.** \
-- If adding new fields, do not name fields with spaces or non-standard characters. \
+Update or fill in tables using source materials (if necessary) in Postico: 
+- Double check all fields for accuracy: **innaccurate and incomplete data are worse than no data.** 
+- If adding new fields, do not name fields with spaces or non-standard characters. 
 - Do not include duplicated information (e.g., if there is a already a field the unit name and you are adding a field for its descriptions by copying and pasting, do not include the strat_name in the description.)
 
 1. Update the geology table (see [geology instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/geology.md))

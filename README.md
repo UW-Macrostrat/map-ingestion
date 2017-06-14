@@ -24,7 +24,7 @@ Change directory to burwell repo folder
 
 **4. Process dataset**
 
-Move the issue to the "In progress" column in [Processing](https://github.com/UW-Macrostrat/burwell-processing/projects/1)
+Move the issue to the "In progress" column in [Processing](https://github.com/UW-Macrostrat/burwell-processing/projects/1).
 
 Update or fill in tables using source materials (if necessary) in Postico:\
 Double check all fields for accuracy: **innaccurate and incomplete data are worse than no data.** \

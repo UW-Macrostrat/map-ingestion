@@ -103,7 +103,7 @@ WHERE l.interval_name = 'Cambrian'
   AND age ILIKE 'Late Proterozoic-Early Paleozoic';
 ```
 
-# Sample of End Product:
+# Sample End Product:
 
 unit | name | strat_name | hierarchy| age | description | lithology | geom | early_id | late_id
 ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ---------- | ----------

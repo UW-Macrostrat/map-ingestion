@@ -15,6 +15,17 @@ WHERE age ILIKE m.interval_name;
 SElECT distinct age FROM table_name WHERE early_id is NULL;
 ```
 
+**Set late_id and early_id with a string replace**
+*Run if age data uses 'lower' and 'upper' instead of 'late' and 'early'*
+
+```
+UPDATE table_name 
+SET early_id = m.id, late_id = m.id 
+FROM macrostrat.intervals m 
+WHERE m.interval_name ILIKE REPLACE(age,'Lower','Early') 
+  AND early_id IS NULL;
+```
+
 **Set late_id to right side of age string**
 
 ```
@@ -46,12 +57,3 @@ WHERE l.interval_name = 'Cambrian'
   AND age ILIKE 'Late Proterozoic-Early Paleozoic';
 ```
 
-**Set late_id and early_id with a string replace**
-
-```
-UPDATE table_name 
-SET early_id = m.id, late_id = m.id 
-FROM macrostrat.intervals m 
-WHERE m.interval_name ILIKE REPLACE(age,'Lower','Early') 
-  AND early_id IS NULL;
-```

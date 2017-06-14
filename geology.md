@@ -1,23 +1,37 @@
 # Step 1: Add columns for missing data.
-Needed columns: name, strat_name, hierarchy, age, description
+Needed text columns: `name`, `strat_name`, `hierarchy`, `age`, `description` and/or `lithology` \
+Optional text columns: `comments`
 
-
-
-**Add a column:**
-** 
+**Add column example:**
 ```
 ALTER TABLE table_name ADD COLUMN column_name TEXT;
 ```
 
 
 # Step 2: Fill in missing data.
-**Update example:**
+
+
+Use source materials (maps, pamphlets, etc.) to update the geology table.
++ `name`: formal or informal unit name 
++ `strat_name`: formal stratigraphic name (e.g. St. Peter Formation); leave column blank for units with informal names (e.g. alluvium). **NOTE:** If name contains more than one unit, separate them with a semicolon
++ `hierarchy`: if denoted, formal name(s) of unit ranked above the `strat_name` unit. **Note:** If more than one rank above strat_name is denoted, separate the hierarchy names with "of the". 
++ `age`: age interval(s) of unit.  
++ `description`: description of map unit
++ `lithology`: lithology of map unit
++ `comments`: any relevant/additional comments
+
+**UPDATE example:**
 ```
 UPDATE sources.table_name set name='St. Peter Formation' where unit='Os';
 ```
+**SELECT DISTINCT example:**
 
-# Joining early_ids and late_ids to the geology table
+(May be useful to select distinct rows to see where data is missing)
+```
+SELECT DISTINCT unit_code, name, strat_name, hierarchy, age, description from sources.table_name;
+```
 
+# Step 3: Join early_id and late_id to the geology table.
 
 **Add early_id and late_id columns to geo table:**
 ```

@@ -17,7 +17,7 @@ Run the following commands in terminal:
 Change directory to burwell repo folder
 
 
-`cd ~/Documents/burwell-master`
+`cd [path]`
 
 `./import table_name [path] false LATIN1`
    
@@ -32,7 +32,7 @@ Change directory to burwell repo folder
   + Homogenize data for points into a single table (see [points instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/points.md))
   
 **5. Zip completed data table(s)** 
-  + Ex. `pg_dump -x -O -t sources.germany_geo burwell|gzip>germany_geo.sql.gz`
+  + Ex. `pg_dump -x -O -t sources.table_name burwell|gzip>table_name.sql.gz`
   
 **6. Create a new folder for the dataset, and include:** 
    + shapefiles (save geology geometry as `geology.shp`, lines (faults, folds, etc.) as `lines.shp`, and points (strike/dip) as `points.shp`)
@@ -44,7 +44,7 @@ Change directory to burwell repo folder
   
 Example command (in terminal):   
   
-`scp -P 2200 -r ~/Documents/Macrostrat/source_folder collaborator@teststrata.geology.wisc.edu:/users/collaborator`
+`scp -P 2200 -r [path] collaborator@teststrata.geology.wisc.edu:/users/collaborator`
 
 **8. Create a new issue on this repository and fill out all fields**
 

@@ -27,7 +27,7 @@ Change directory to burwell repo folder
       + Double check all fields for accuracy: **innaccurate and incomplete data are worse than no data**
       + If adding new fields, do not name fields with spaces or non-standard characters
       + Do not include duplicated information (e.g., if there is a already a field the unit name and you are adding a field for its descriptions by copying and pasting, do not include the strat_name in the description)
-  + Assign early_ids and late_ids to units in geology table (see [ages instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/ages.md))
+  + Update the geology table (see [geology instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/geology.md))
   + Homogenize data for lines into a single table  (see [lines instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/lines.md))
   + Homogenize data for points into a single table (see [points instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/points.md))
   

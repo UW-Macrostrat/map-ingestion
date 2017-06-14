@@ -1,24 +1,24 @@
 # Joining early_ids and late_ids to the geology table
 
-**Run first to see what ages need to be matched**
+**Run first to assign late_ids and early_ids to single age strings**
 
 ```
-SElECT distinct age FROM temp2 WHERE early_id is NULL;
-```
-
-**Set late_id and early_id to single age string**
-
-```
-UPDATE temp2 
+UPDATE table_name 
 SET late_id = m.id, early_id = m.id 
 FROM macrostrat.intervals m
 WHERE age ILIKE m.interval_name;
 ```
 
+**Run second to see what ages still need to be matched**
+
+```
+SElECT distinct age FROM table_name WHERE early_id is NULL;
+```
+
 **Set late_id to right side of age string**
 
 ```
-UPDATE temp2 
+UPDATE table_name 
 SET late_id = m.id 
 FROM macrostrat.intervals m 
 WHERE age ILIKE concat('%-', m.interval_name) 
@@ -28,7 +28,7 @@ WHERE age ILIKE concat('%-', m.interval_name)
 **Set early_id to left side of age string**
 
 ```
-UPDATE temp2 
+UPDATE table_name 
 SET early_id = m.id 
 FROM macrostrat.intervals m 
 WHERE age ILIKE concat(m.interval_name, '-%') 
@@ -38,7 +38,7 @@ WHERE age ILIKE concat(m.interval_name, '-%')
 **Set late_id and early_id using an exact string match**
 
 ```
-UPDATE temp2 
+UPDATE table_name 
 SET late_id = m.id, early_id=e.id 
 FROM macrostrat.intervals m, macrostrat.intervals e 
 WHERE m.interval_name = 'Cambrian' 
@@ -49,7 +49,7 @@ WHERE m.interval_name = 'Cambrian'
 **Set late_id and early_id with a string replace**
 
 ```
-UPDATE temp2 
+UPDATE table_name 
 SET early_id = m.id, late_id = m.id 
 FROM macrostrat.intervals m 
 WHERE m.interval_name ILIKE REPLACE(age,'Lower','Early') 

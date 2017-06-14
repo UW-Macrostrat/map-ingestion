@@ -23,13 +23,15 @@ Change directory to burwell repo folder
    
 
 **4. Process dataset**
-  + Update or fill in tables using source materials (if necessary) in Postico:
-      + Double check all fields for accuracy: **innaccurate and incomplete data are worse than no data**
-      + If adding new fields, do not name fields with spaces or non-standard characters
-      + Do not include duplicated information (e.g., if there is a already a field the unit name and you are adding a field for its descriptions by copying and pasting, do not include the strat_name in the description)
-  + Update the geology table (see [geology instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/geology.md))
-  + Homogenize data for lines into a single table  (see [lines instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/lines.md))
-  + Homogenize data for points into a single table (see [points instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/points.md))
+
+Update or fill in tables using source materials (if necessary) in Postico: \
+Double check all fields for accuracy: **innaccurate and incomplete data are worse than no data.** \
+If adding new fields, do not name fields with spaces or non-standard characters. \
+Do not include duplicated information (e.g., if there is a already a field the unit name and you are adding a field for its descriptions by copying and pasting, do not include the strat_name in the description.)
+
+1. Update the geology table (see [geology instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/geology.md))
+2. Homogenize data for lines into a single table  (see [line instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/lines.md))
+3. Homogenize data for points into a single table (see [point instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/points.md))
   
 **5. Zip completed data table(s) (in terminal)** 
   + Ex. `pg_dump -x -O -t sources.table_name burwell|gzip>table_name.sql.gz`

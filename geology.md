@@ -13,7 +13,7 @@ ALTER TABLE table_name ADD COLUMN column_name TEXT;
 
 Use source materials (maps, pamphlets, etc.) to update the geology table.
 + `name`: formal or informal unit name 
-+ `strat_name`: formal stratigraphic name (e.g. St. Peter Formation); leave column blank for units with informal names (e.g. alluvium). **NOTE:** If name contains more than one unit, separate them with a semicolon
++ `strat_name`: formal stratigraphic name (e.g. St. Peter Formation); leave column blank for units with informal names (e.g. alluvium). **NOTE:** Separate multiple names with semicolons
 + `hierarchy`: if denoted, formal name(s) of unit ranked above the `strat_name` unit. **Note:** If more than one rank above strat_name is denoted, separate the hierarchy names with "of the". 
 
 Example:

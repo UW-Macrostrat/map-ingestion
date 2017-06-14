@@ -31,7 +31,7 @@ Change directory to burwell repo folder
   + Homogenize data for lines into a single table  (see [lines instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/lines.md))
   + Homogenize data for points into a single table (see [points instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/points.md))
   
-**5. Zip completed data table(s)** 
+**5. Zip completed data table(s) (in terminal)** 
   + Ex. `pg_dump -x -O -t sources.table_name burwell|gzip>table_name.sql.gz`
   
 **6. Create a new folder for the dataset, and include:** 

@@ -28,7 +28,7 @@
 | joint |
 
 
-## SQL Example 
+## SQL Example for Right Hand Rule
 ### To add unique dip_dir to a table: 
 ````UPDATE sources.points set dip_dir=strike+90````
 

@@ -33,4 +33,4 @@
 ````UPDATE sources.points set dip_dir=strike+90````
 
 ### Account for strike values greater than 270: 
-````UPDATE sources.point set dip_dir=dip_dir-360 where dip_dir>360````
+````UPDATE sources.points set dip_dir=dip_dir-360 where dip_dir>360````

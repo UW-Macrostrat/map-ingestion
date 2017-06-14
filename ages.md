@@ -15,8 +15,8 @@ WHERE age ILIKE m.interval_name;
 SElECT distinct age FROM table_name WHERE early_id is NULL;
 ```
 
-**Set late_id and early_id with a string replace**
-*Run if age data uses 'lower' and 'upper' instead of 'late' and 'early'*
+**Set late_id and early_id with a string replace** \
+Run if age data uses 'lower' and 'upper' instead of 'late' and 'early'
 
 ```
 UPDATE table_name 

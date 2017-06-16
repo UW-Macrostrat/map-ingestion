@@ -30,7 +30,11 @@
 
 ## SQL Example for Right Hand Rule
 ### To add unique dip_dir to a table: 
-````UPDATE sources.points set dip_dir=strike+90````
+````SQL
+UPDATE sources.points set dip_dir=strike+90;
+````
 
 ### Remember to account for strike values >270: 
-````UPDATE sources.points set dip_dir=dip_dir-360 where dip_dir>360````
+````SQL
+UPDATE sources.points set dip_dir=dip_dir-360 where dip_dir>360;
+````

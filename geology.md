@@ -1,4 +1,4 @@
-**Note:** The [brackets] in the example SQL script indicate portions that must be replaced with specific table or column names. For example, a `table_name` might be `Dane_County_geo`; a `column_name` might be `age`.
+**Note:** The [brackets] in the example SQL script indicate portions that must be replaced with specific table or column names. For example, a `table_name` (name you assigned when you import to Postico) might be `Dane_County_geo`; a `column_name` might be `age`.
 
 # Step 1: Add Columns for Missing Data.
 Needed text columns: `name`, `strat_name`, `hierarchy`, `age`, `description` and/or `lithology` \

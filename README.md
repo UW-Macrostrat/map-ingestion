@@ -10,9 +10,13 @@
   
 **3. Import shapefile data table(s) of interest into PostgreSQL**
 
-*NOTE: If doing this for the first time, download the [Burwell Repository](https://github.com/UW-Macrostrat/burwell), and save the folder as `burwell` on your machine.*
++ Data of interest (in order of priority):
+  + *polygons* showing bedrock and surficial geology with age, lithology/description, and a name of some kind
+  + *lines* identifing faults, folds, dikes, and beds and other geology-specific features. lines not pertaining to geological features (e.g., map boundaries, roads, transects, cross section lines, etc.) are not to be processed.
+  + *points* identifying measurements of strike/dip, foliation, lineation, and other rock-specific features. points of general interest (e.g., mines, craters, stations) are not to be processed.
 
-Run the following commands in terminal:
+Run the following commands in terminal:\
+**NOTE**: If doing this for the first time, download the [Burwell Repository](https://github.com/UW-Macrostrat/burwell), and save the folder as `burwell` on your machine.*
 
 Change directory to burwell repo folder
 
@@ -39,6 +43,7 @@ Do not include duplicated information (e.g., if there is a already a field the u
   + Ex. `pg_dump -x -O -t sources.table_name burwell|gzip>table_name.sql.gz`
   
 **6. Create a new folder for the dataset, and include:** 
+   + In general, there is no reason to delete anything from the original data directories that are download. Original data should be preserved
    + shapefiles (save geology geometry as `geology.shp`, lines (faults, folds, etc.) as `lines.shp`, and points (strike/dip) as `points.shp`)
    + zipped SQL dump(s)
    + any `txt` or `pdf` metadata renamed and saved as `metadata.x`
@@ -52,11 +57,4 @@ Example command (in terminal):
 
 **8. Create a new issue on this repository and fill out all fields**
 
-**9. Move the issue to the "Ready to import" column in [Processing](https://github.com/UW-Macrostrat/burwell-processing/projects/1)**
-
-## Data of interest and importance 
-+ In general, there is no reason to delete anything from the original data directories that are download. Original data should be preserved
-+ Data of specific use (in order of priority):
-  + *polygons* showing bedrock and surficial geology with age, lithology/description, and a name of some kind
-  + *lines* identifing faults, folds, dikes, and beds and other geology-specific features. lines not pertaining to geological features (e.g., map boundaries, roads, transects, cross section lines, etc.) are not to be processed.
-  + *points* identifying measurements of strike/dip, foliation, lineation, and other rock-specific features. points of general interest (e.g., mines, craters, stations) are not to be processed.
+**9. Move the issue to the "Ready to import" column in [Processing](https://github.com/UW-Macrostrat/burwell-processing/projects/1)** and assign Cambro to the issue

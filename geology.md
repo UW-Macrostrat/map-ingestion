@@ -36,7 +36,7 @@ Galeros Formation| Chuar Group of the Grand Canyon Supergroup
 
 **UPDATE example:**
 ```SQL
-UPDATE sources.wisconsn_geo set name='St. Peter Formation' where unit='Os';
+UPDATE sources.wisconsin_geo set name='St. Peter Formation' where unit='Os';
 ```
 **SELECT DISTINCT example:**
 

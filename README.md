@@ -5,23 +5,26 @@
 **1. Find, download, and evaluate dataset**
   + Data requirements: vector geometries, ages, lithologies.
   
-**2. Convert geospatial data to shapefile format if necessary**
-  + e.g. if e00 see [conversion instructions](http://support.esri.com/technical-article/000004705)
+**2. Convert geospatial data to shapefile format if necessary**\
+  e.g. if e00 see [conversion instructions](http://support.esri.com/technical-article/000004705)
   
 **3. Import shapefile data table(s) of interest into PostgreSQL**
 
-+ Data of interest (in order of priority):
+Data of interest (in order of priority):
   + *polygons* showing bedrock and surficial geology with age, lithology/description, and a name of some kind
   + *lines* identifing faults, folds, dikes, and beds and other geology-specific features. lines not pertaining to geological features (e.g., map boundaries, roads, transects, cross section lines, etc.) are not to be processed.
   + *points* identifying measurements of strike/dip, foliation, lineation, and other rock-specific features. points of general interest (e.g., mines, craters, stations) are not to be processed.
 
-Run the following commands in terminal:\
+Run the following commands in terminal to import shapefile attribute tables:\
 **NOTE**: If doing this for the first time, download the [Burwell Repository](https://github.com/UW-Macrostrat/burwell), and save the folder as `burwell` on your machine.*
 
 Change directory to burwell repo folder
 
 
 `cd [path to repo folder]`
+
+
+Import to Postico
 
 `./import table_name [path to shapefile] false LATIN1`
    
@@ -43,15 +46,15 @@ Do not include duplicated information (e.g., if there is a already a field the u
   + Ex. `pg_dump -x -O -t sources.table_name burwell|gzip>table_name.sql.gz`
   
 **6. Create a new folder for the dataset, and include:** 
-   + In general, there is no reason to delete anything from the original data directories that are download. Original data should be preserved
+   + original data should be preserved. In general, there is no reason to delete anything from the original data directories that are download
    + shapefiles (save geology geometry as `geology.shp`, lines (faults, folds, etc.) as `lines.shp`, and points (strike/dip) as `points.shp`)
-   + zipped SQL dump(s)
+   + zipped SQL dump(s) of updated attribute tables
    + any `txt` or `pdf` metadata renamed and saved as `metadata.x`
    + any other relevant source materials (maps, pamphlets, map descriptions, readme, etc.)
    
 **7. Secure copy this new folder to teststrata:**
   
-Example command (in terminal):   
+Push data to teststrata in terminal:   
   
 `scp -P 2200 -r [path] collaborator@teststrata.geology.wisc.edu:/users/collaborator`
 

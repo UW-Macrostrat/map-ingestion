@@ -2,15 +2,18 @@
 
 ## Workflow
 
-**1. Find, download, and evaluate dataset**
-  + Data requirements: vector geometries, ages, lithologies.
+**1. Find, download, and evaluate dataset**\
+  Data Requirements: 
++ vector geometry
++ age
++ lithology / description
   
 **2. Convert geospatial data to shapefile format if necessary**\
   e.g. if e00 see [conversion instructions](http://support.esri.com/technical-article/000004705)
   
 **3. Import shapefile data table(s) of interest into PostgreSQL**
 
-Data of interest (in order of priority):
+Data of Interest (in order of priority):
   + *polygons* showing bedrock and surficial geology with age, lithology/description, and a name of some kind
   + *lines* identifing faults, folds, dikes, and beds and other geology-specific features. lines not pertaining to geological features (e.g., map boundaries, roads, transects, cross section lines, etc.) are not to be processed.
   + *points* identifying measurements of strike/dip, foliation, lineation, and other rock-specific features. points of general interest (e.g., mines, craters, stations) are not to be processed.

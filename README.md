@@ -2,13 +2,15 @@
 
 ## Workflow
 
-**1. Find, download, and evaluate dataset**\
+**1. Find, download, and evaluate dataset**
+
   Data Requirements: 
 + vector geometry
 + age
 + lithology / description
   
-**2. Convert geospatial data to shapefile format if necessary**\
+**2. Convert geospatial data to shapefile format if necessary**
+
   e.g. if e00 see [conversion instructions](http://support.esri.com/technical-article/000004705)
   
 **3. Import shapefile data table(s) of interest into PostgreSQL**

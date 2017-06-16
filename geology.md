@@ -4,7 +4,7 @@ Optional text columns: `comments`
 
 **ADD COLUMN example:**
 ```SQL
-ALTER TABLE table_name ADD COLUMN column_name TEXT;
+ALTER TABLE sources.[table_name] ADD COLUMN [column_name] TEXT;
 ```
 
 # Step 2: Fill in Missing Data.
@@ -34,27 +34,27 @@ Galeros Formation| Chuar Group of the Grand Canyon Supergroup
 
 **UPDATE example:**
 ```SQL
-UPDATE sources.table_name set name='St. Peter Formation' where unit='Os';
+UPDATE sources.wisconsn_geo set name='St. Peter Formation' where unit='Os';
 ```
 **SELECT DISTINCT example:**
 
 (May be useful to select distinct rows to see where data is missing)
 ```SQL
-SELECT DISTINCT unit_code, name, strat_name, hierarchy, age, description from sources.table_name;
+SELECT DISTINCT unit_code, name, strat_name, hierarchy, age, description from sources.[table_name];
 ```
 
 # Step 3: Join early_id and late_id to the Geology Table.
 
 **Add early_id and late_id columns to geo table:**
 ```SQL
-ALTER TABLE table_name ADD COLUMN early_id INTEGER;
-ALTER TABLE table_name ADD COLUMN late_id INTEGER;
+ALTER TABLE sources.[table_name] ADD COLUMN early_id INTEGER;
+ALTER TABLE sources.[table_name] ADD COLUMN late_id INTEGER;
 ```
 
 **Run first to assign late_ids and early_ids to single age strings**
 
 ```SQL
-UPDATE table_name 
+UPDATE sources.[table_name] 
 SET late_id = m.id, early_id = m.id 
 FROM macrostrat.intervals m
 WHERE age ILIKE m.interval_name;
@@ -63,7 +63,7 @@ WHERE age ILIKE m.interval_name;
 **Run second to see what ages still need to be matched**
 
 ```SQL
-SElECT distinct age FROM table_name WHERE early_id is NULL;
+SElECT distinct age FROM sources.[table_name] WHERE early_id is NULL;
 ```
 
 **Set late_id and early_id with a string replace** \
@@ -71,7 +71,7 @@ SElECT distinct age FROM table_name WHERE early_id is NULL;
 **Run if age data uses 'Early Proterozoic', 'Middle Proterozoic', and 'Late Proterozoic' instead of 'Paleoproterozoic', 'Mesoproterozoic', and 'Neoproterozoic'**
 
 ```SQL
-UPDATE table_name 
+UPDATE sources.[table_name]  
 SET early_id = m.id, late_id = m.id 
 FROM macrostrat.intervals m 
 WHERE m.interval_name ILIKE REPLACE(age,'Lower','Early') 
@@ -81,7 +81,7 @@ WHERE m.interval_name ILIKE REPLACE(age,'Lower','Early')
 **Set late_id to right side of age string**
 
 ```SQL
-UPDATE table_name 
+UPDATE sources.[table_name]  
 SET late_id = l.id 
 FROM macrostrat.intervals l 
 WHERE age ILIKE concat('%-', l.interval_name) 
@@ -91,7 +91,7 @@ WHERE age ILIKE concat('%-', l.interval_name)
 **Set early_id to left side of age string**
 
 ```SQL
-UPDATE table_name 
+UPDATE sources.[table_name]  
 SET early_id = e.id 
 FROM macrostrat.intervals e 
 WHERE age ILIKE concat(e.interval_name, '-%') 
@@ -101,7 +101,7 @@ WHERE age ILIKE concat(e.interval_name, '-%')
 **Set late_id and early_id using an exact string match**
 
 ```SQL
-UPDATE table_name 
+UPDATE sources.[table_name]  
 SET late_id = l.id, early_id=e.id 
 FROM macrostrat.intervals l, macrostrat.intervals e 
 WHERE l.interval_name = 'Cambrian' 

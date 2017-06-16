@@ -11,8 +11,16 @@ ALTER TABLE table_name ADD COLUMN column_name TEXT;
 
 
 Use source materials (maps, pamphlets, etc.) to update the geology table.
-+ `name`: formal or informal unit name 
-+ `strat_name`: formal stratigraphic name (e.g. St. Peter Formation); leave column blank for units with informal names (e.g. alluvium). **NOTE:** Separate multiple names with semicolons
++ `name`: formal or informal unit name (often already in original attribute tables or in map legends or descriptions) 
++ `strat_name`: formal stratigraphic name (e.g. St. Peter Formation) of the lowest ranked unit in the name; leave column blank for units with informal names (e.g. alluvium). **NOTE:** Separate multiple names with semicolons
+
+Example
+
+name | strat_name
+---------- | ----------
+Minnekahta Limestone and Opeche Shale, undivided| Minnekahta Limestone; Opeche Shale
+
+
 + `hierarchy`: if denoted, formal name(s) of unit ranked above the `strat_name` unit. **Note:** If more than one rank above strat_name is denoted, separate the hierarchy names with "of the" 
 
 Example:

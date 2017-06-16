@@ -23,7 +23,7 @@ Minnekahta Limestone and Opeche Shale, undivided| Minnekahta Limestone; Opeche S
 
 + `hierarchy`: if denoted, formal name(s) of unit ranked above the `strat_name` unit. **Note:** If more than one rank above strat_name is denoted, separate the hierarchy names with "of the" 
 
-Example:
+Example
 
 strat_name | hierarchy
 ---------- | ----------

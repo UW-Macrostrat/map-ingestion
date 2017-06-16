@@ -63,6 +63,6 @@ Push folder to teststrata in terminal:
   
 `scp -P 2200 -r [path] collaborator@teststrata.geology.wisc.edu:/users/collaborator`
 
-### 8. Create a new issue on this repository and fill out all fields
+### 8. Fill out all fields for source issue
 
 ### 9. Move the issue to the "Ready to import" column in [Processing](https://github.com/UW-Macrostrat/burwell-processing/projects/1)  and assign Cambro to the issue

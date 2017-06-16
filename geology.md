@@ -4,7 +4,7 @@ Optional text columns: `comments`
 
 **ADD COLUMN example:**
 ```
-ALTER TABLE table_name ADD COLUMN column_name TEXT;
+ALTER TABLE sources.table_name ADD COLUMN column_name TEXT;
 ```
 
 # Step 2: Fill in Missing Data.
@@ -49,14 +49,14 @@ SELECT DISTINCT unit_code, name, strat_name, hierarchy, age, description from so
 
 **Add early_id and late_id columns to geo table:**
 ```
-ALTER TABLE table_name ADD COLUMN early_id INTEGER;
-ALTER TABLE table_name ADD COLUMN late_id INTEGER;
+ALTER TABLE sources.table_name ADD COLUMN early_id INTEGER;
+ALTER TABLE sources.table_name ADD COLUMN late_id INTEGER;
 ```
 
 **Run first to assign late_ids and early_ids to single age strings**
 
 ```
-UPDATE table_name 
+UPDATE sources.table_name 
 SET late_id = m.id, early_id = m.id 
 FROM macrostrat.intervals m
 WHERE age ILIKE m.interval_name;
@@ -73,7 +73,7 @@ SElECT distinct age FROM table_name WHERE early_id is NULL;
 **Run if age data uses 'Early Proterozoic', 'Middle Proterozoic', and 'Late Proterozoic' instead of 'Paleoproterozoic', 'Mesoproterozoic', and 'Neoproterozoic'**
 
 ```
-UPDATE table_name 
+UPDATE sources.table_name 
 SET early_id = m.id, late_id = m.id 
 FROM macrostrat.intervals m 
 WHERE m.interval_name ILIKE REPLACE(age,'Lower','Early') 
@@ -83,7 +83,7 @@ WHERE m.interval_name ILIKE REPLACE(age,'Lower','Early')
 **Set late_id to right side of age string**
 
 ```
-UPDATE table_name 
+UPDATE sources.table_name 
 SET late_id = l.id 
 FROM macrostrat.intervals l 
 WHERE age ILIKE concat('%-', l.interval_name) 
@@ -93,7 +93,7 @@ WHERE age ILIKE concat('%-', l.interval_name)
 **Set early_id to left side of age string**
 
 ```
-UPDATE table_name 
+UPDATE sources.table_name 
 SET early_id = e.id 
 FROM macrostrat.intervals e 
 WHERE age ILIKE concat(e.interval_name, '-%') 
@@ -103,7 +103,7 @@ WHERE age ILIKE concat(e.interval_name, '-%')
 **Set late_id and early_id using an exact string match**
 
 ```
-UPDATE table_name 
+UPDATE sources.table_name 
 SET late_id = l.id, early_id=e.id 
 FROM macrostrat.intervals l, macrostrat.intervals e 
 WHERE l.interval_name = 'Cambrian' 

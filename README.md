@@ -1,6 +1,7 @@
 # Burwell processing
 
 ## Workflow
+**Note:** The [brackets] in the example script indicate portions that must be replaced with specific directory paths or names specific to unique map sources. For example, a `path` might look like `~/Desktop/Folder`; a good `table_name` might be `Sheridan_WY`.
 
 ### 1. Find, download, and evaluate dataset
 
@@ -31,7 +32,7 @@ Change directory to burwell repo folder
 
 Import to Postico
 
-`./import table_name [path to shapefile] false LATIN1`
+`./import [table_name] [path to shapefile] false LATIN1`
    
 
 ### 4. Process dataset
@@ -48,7 +49,7 @@ Do not include duplicated information (e.g., if there is a already a field the u
 3. Homogenize data for points into a single table (see [point instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/points.md))
   
 ### 5. Zip completed data table(s) (in terminal)** 
-`pg_dump -x -O -t sources.table_name burwell|gzip>table_name.sql.gz`
+`pg_dump -x -O -t sources.[table_name] burwell|gzip>[table_name].sql.gz`
   
 ### 6. Create a new folder for the dataset, and include:
    + original data should be preserved. In general, there is no reason to delete anything from the original data directories that are download

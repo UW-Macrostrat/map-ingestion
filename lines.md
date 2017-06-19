@@ -49,6 +49,7 @@
 | klippe |
 | fenster |
 | impact structure |
+| volcanogenic crater |
 
 ## SQL Examples 
 ### To add unique gids to a table: 

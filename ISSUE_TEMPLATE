@@ -1,4 +1,10 @@
-## Info
+<!---
+Instructions:
+
+Fill out the fields below following the instructions for each. 
+Delete these comments when you are done.
+-->
+
 **Name:**
 <!---
 The name of the map.
@@ -12,8 +18,17 @@ Example: https://pubs.usgs.gov/sim/3284/
 -->
 
 **Estimated scale:**
+<!---
+The estimated Burwell scale.
+Can be one of the following: 
+  - tiny (global map)
+  - small (continental)
+  - medium (state/province)
+  - large (county, quad, etc)
+-->
 
 **Number of bedrock polygons:**
+
 
 **Lithology field:**
 <!---

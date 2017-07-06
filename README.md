@@ -10,10 +10,23 @@
 + age
 + lithology / description
   
-### 2. Convert geospatial data to shapefile format if necessary
+### 2. Process geospatial data
+Data comes in many different formats. If there are numerous download options available, choose GeoDatabase (.gdb), shapefile (.shp), and ArcInfo Coverage/Interchange (.e00), in that order of priority.
 
-  e.g. if e00 see [conversion instructions](http://support.esri.com/technical-article/000004705)
+If the data is only available as an ArcInfo coverage, you must first convert it to a shapefile. You can either use ArcGIS ([instructions](http://support.esri.com/technical-article/000004705)), or `ogr2ogr` as so:
+
+````
+ogr2ogr -f "ESRI Shapefile" [output] [input.e00]
+````
+
+**Combine data types**
+The data we are looking for is often split across numerous files/tables. For example, it is common to see faults and syn/anticlines in different files. Start by merging the datasets into their associated geometry types (polygons, lines, and points). 
+
   
+ **Identify location of attributes**
+ The attributes (name, age, description) of polygons and lines are found in many places. Before committing to copy/pasting them frmo a PDF, make sure you have checked all tables of the geodatabase, all metadata, and all text files. Often times it is possible to extract them more easily from a plain text file than a PDF.
+ 
+ 
 ### 3. Import shapefile data table(s) of interest into PostgreSQL
 
 **Data of Interest (in order of priority):**

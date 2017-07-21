@@ -61,7 +61,8 @@ Do not include duplicated information (e.g., if there is a already a field the u
 2. Homogenize data for lines into a single table  (see [line instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/lines.md))
 3. Homogenize data for points into a single table (see [point instructions](https://github.com/UW-Macrostrat/burwell-processing/blob/master/points.md))
   
-### 5. Zip completed data table(s) (in terminal)** 
+### 5. Zip completed data table(s) (in terminal)**
+For each table (polygons, lines, points), dump the table and zip it. **DO NOT COMBINE ALL TABLES INTO ONE DUMP**
 `pg_dump -x -O -t sources.[table_name] burwell|gzip>[table_name].sql.gz`
   
 ### 6. Create a new folder for the dataset, and include:

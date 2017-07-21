@@ -73,10 +73,17 @@ For each table (polygons, lines, points), dump the table and zip it. **DO NOT CO
    + any other relevant source materials (maps, pamphlets, map descriptions, readme, etc.)
    
 ### 7. Secure copy this new folder to teststrata:
+Before copying the folder to teststrata, make sure permissions on it are correctly set:
+
+`
+chmod -R 777 [folder]
+`
+
+Next, push the folder to teststrata in terminal:   
   
-Push folder to teststrata in terminal:   
-  
-`scp -P 2200 -r [path] collaborator@teststrata.geology.wisc.edu:/users/collaborator`
+`
+scp -P 2200 -r [folder] collaborator@teststrata.geology.wisc.edu:/Users/collaborator
+`
 
 ### 8. Fill out all fields for source issue
 

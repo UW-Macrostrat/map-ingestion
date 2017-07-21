@@ -27,6 +27,18 @@ Can be one of the following:
   - large (county, quad, etc)
 -->
 
+**Folder name:**
+<!---
+What is the name of the folder located at /Users/collaborator for this dataset?
+-->
+
+**Dataset names:**
+<!---
+What is the name for the dump of each table?
+For example:
+Lines: `wi_wood_lines.sql.gz`
+-->
+
 **Number of bedrock polygons:**
 
 

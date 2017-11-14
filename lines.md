@@ -24,33 +24,34 @@
 
 | Used new_types     |
 | :------------- |
-| anticline |
-| bed |
-| dike |
-| fault |
-| flow |
-| fold |
-| fracture |
-| growth fault |
-| lineament |
-| marker bed |
-| monocline |
-| normal fault |
-| shear zone |
-| slide |
-| strike-slip fault |
-| suture |
-| syncline |
-| thrust fault |
-| vein |
-| zone |
-| spreading center |
-| extinct spreading center fracture |
-| klippe |
-| fenster |
-| impact structure |
-| volcanogenic crater |
-
+| anticline|
+|bed|
+|dike|
+|fault|
+|fault zone|
+|flow|
+|fold|
+|fracture|
+|growth fault|
+|landslide|
+|lineament|
+|marker bed|
+|monocline|
+|moraine|
+|normal fault|
+|scarp|
+|shear zone|
+|shoreline|
+|sill|
+|slide|
+|slump|
+|strike-slip fault|
+|suture|
+|syncline|
+|thrust fault|
+|vein|
+|volcanogenic crater|
+|zone|
 ## SQL Examples 
 ### To add unique gids to a table: 
 ````SQL

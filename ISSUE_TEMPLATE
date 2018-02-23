@@ -2,7 +2,6 @@
 Instructions:
 
 Fill out the fields below following the instructions for each. 
-Delete these comments when you are done.
 -->
 
 **Name:**
@@ -15,6 +14,11 @@ Example: Geologic Map of the Ute Mountain 7.5' Quadrangle, Taos County, New Mexi
 <!---
 A direct link to the original map
 Example: https://pubs.usgs.gov/sim/3284/
+
+Can also include multiple links if relevant. For example:
+Original Publication: https://.../document.pdf
+Original GIS data: https://.../data.zip
+Porcessed GIS data: https://.../data_processed.zip
 -->
 
 **Estimated scale:**

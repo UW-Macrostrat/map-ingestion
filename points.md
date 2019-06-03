@@ -21,11 +21,25 @@
 
 | Used point_types     |
 | :------------- |
-| bedding |
-| foliation |
-| fault surface |
-| fold axis |
-| joint |
+|axial plane|
+|bedding|
+|cleavage|
+|crenulation|
+|dike|
+|fault|
+|fault offset|
+|fault plane|
+|fault surface|
+|fold axis|
+|foliation|
+|fracture|
+|joint|
+|lineation|
+|ore|
+|overturned bedding|
+|sinkhole|
+|transport direction|
+|vein|
 
 
 ## SQL Example for Right Hand Rule

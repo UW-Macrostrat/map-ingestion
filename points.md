@@ -29,7 +29,6 @@
 |fault|
 |fault offset|
 |fault plane|
-|fault surface|
 |fold axis|
 |foliation|
 |fracture|

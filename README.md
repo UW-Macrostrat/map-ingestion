@@ -9,6 +9,8 @@
 + vector geometry
 + age
 + lithology / description
+
+You should check your proposed source for overlap with other maps already in the system. Our staging area for maps: https://dev.macrostrat.org/api/v2/defs/sources?all&format=geojson_bare 
   
 ### 2. Process geospatial data
 Data comes in many different formats. If there are numerous download options available, choose GeoDatabase (.gdb), shapefile (.shp), and ArcInfo Coverage/Interchange (.e00), in that order of priority.
